@@ -64,7 +64,7 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
 | **Versionamento**    | Git e GitHub                   |
 
 
-Funcionalidades
+## Funcionalidades
 
 ✅ ETL completo: extração, limpeza e carga dos dados
 ✅ Feature engineering com janelas móveis e z-score
@@ -77,7 +77,7 @@ Distribuição dos scores
 Importância das features
 Tabela de alertas de fraude
 
- Pipeline de Execução
+ ## Pipeline de Execução
 
 1️⃣ ETL
 Extrai dados CSV e insere em raw_transactions (PostgreSQL).
@@ -133,6 +133,7 @@ python -m model.train_model
 uvicorn api.main:app --reload --port 8000
 streamlit run dashboard/app_dashboard.py
 ```
+
 
 
 
