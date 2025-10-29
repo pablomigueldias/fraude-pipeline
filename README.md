@@ -39,8 +39,7 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
 
 ## Arquitetura do Projeto
 
-```bash
-📦 fraude-pipeline
+ fraude-pipeline
  ┣ 📂 etl/                # Pipeline de extração e transformação
  ┣ 📂 features/           # Criação das variáveis derivadas
  ┣ 📂 model/              # Treinamento e avaliação do modelo
@@ -62,7 +61,8 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
 | **Ambiente**         | Docker e Virtualenv (.venv)    |
 | **Versionamento**    | Git e GitHub                   |
 
-⚙️ Funcionalidades
+
+Funcionalidades
 
 ✅ ETL completo: extração, limpeza e carga dos dados
 ✅ Feature engineering com janelas móveis e z-score
@@ -70,14 +70,68 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
 ✅ Métricas avançadas: AUC-ROC, AUC-PR, F1-score
 ✅ API de predição via FastAPI
 ✅ Dashboard Streamlit com:
-
 Filtros dinâmicos (data, país, canal, valor)
-
 Distribuição dos scores
-
 Importância das features
-
 Tabela de alertas de fraude
+
+🧩 Pipeline de Execução
+
+1️⃣ ETL
+Extrai dados CSV e insere em raw_transactions (PostgreSQL).
+
+2️⃣ Feature Engineering
+Cria atributos como:
+hour
+is_high_amount
+rolling_1h_tx
+amount_zscore
+country_risk
+
+3️⃣ Treinamento de Modelo
+Treina o modelo RandomForestClassifier e calcula métricas como:
+AUC-ROC
+AUC-PR
+F1-Score
+Matriz de confusão
+
+4️⃣ API com FastAPI
+Endpoint /predict recebe transações e retorna a probabilidade de fraude.
+
+5️⃣ Dashboard Streamlit
+Visualização em tempo real de alertas e indicadores de desempenho do modelo.
+
+
+💻 Como Executar Localmente
+
+1️⃣ Clonar o repositório
+```
+git clone https://github.com/pablomigueldias/fraude-pipeline.git
+cd fraude-pipeline
+```
+2️⃣ Criar e ativar ambiente virtual
+```
+python -m venv .venv
+.venv\Scripts\activate
+```
+3️⃣ Instalar dependências
+```
+pip install -r requirements.txt
+```
+
+4️⃣ Rodar ETL e Treinamento
+```
+python -m etl.load_data
+python -m features.make_feature
+python -m model.train_model
+```
+
+5️⃣ Iniciar API e Dashboard
+```
+uvicorn api.main:app --reload --port 8000
+streamlit run dashboard/app_dashboard.py
+```
+
 
 
 
