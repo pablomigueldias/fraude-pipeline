@@ -52,3 +52,36 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
  ┣ 📜 README.md           # Este arquivo
  ┗ 📜 .env.example        # Exemplo de configuração de ambiente
 
+| Categoria            | Ferramentas                    |
+| -------------------- | ------------------------------ |
+| **Linguagem**        | Python 3.10                    |
+| **ETL / Banco**      | Pandas, SQLAlchemy, PostgreSQL |
+| **Machine Learning** | scikit-learn, joblib           |
+| **API**              | FastAPI, Uvicorn               |
+| **Dashboard**        | Streamlit                      |
+| **Ambiente**         | Docker e Virtualenv (.venv)    |
+| **Versionamento**    | Git e GitHub                   |
+
+⚙️ Funcionalidades
+
+✅ ETL completo: extração, limpeza e carga dos dados
+✅ Feature engineering com janelas móveis e z-score
+✅ Treinamento e avaliação com RandomForestClassifier
+✅ Métricas avançadas: AUC-ROC, AUC-PR, F1-score
+✅ API de predição via FastAPI
+✅ Dashboard Streamlit com:
+
+Filtros dinâmicos (data, país, canal, valor)
+
+Distribuição dos scores
+
+Importância das features
+
+Tabela de alertas de fraude
+
+
+
+
+
+
+
