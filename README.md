@@ -1,4 +1,4 @@
-#  Fraude Pipeline – Detecção Inteligente de Transações Fraudulentas
+# Fraude Pipeline – Detecção Inteligente de Transações Fraudulentas
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green?logo=fastapi)
@@ -7,11 +7,10 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)
 
 Projeto completo de **engenharia de dados e machine learning** para **detecção de fraudes** em transações financeiras.  
-Inclui pipeline de ETL, modelagem com Random Forest, API com FastAPI e visualização via **Streamlit Dashboard**.
+Inclui pipeline de **ETL**, **modelagem com Random Forest**, **API com FastAPI** e visualização interativa via **Streamlit Dashboard**.
 
----
 
-## Sumário
+## 📋 Sumário
 
 - [Visão Geral](#-visão-geral)
 - [Arquitetura do Projeto](#-arquitetura-do-projeto)
@@ -22,11 +21,10 @@ Inclui pipeline de ETL, modelagem com Random Forest, API com FastAPI e visualiza
 - [Como Executar Localmente](#-como-executar-localmente)
 - [Estrutura de Pastas](#-estrutura-de-pastas)
 - [Aprendizados e Desafios](#-aprendizados-e-desafios)
-- [Contato](#-contato)
 
 ---
 
-## Visão Geral
+## 💡 Visão Geral
 
 O **Fraude Pipeline** demonstra um fluxo completo de **dados + IA aplicada à detecção de fraudes**.  
 Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o projeto cobre:
@@ -34,11 +32,14 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
 - Coleta e transformação de dados (`ETL`)
 - Engenharia de atributos (`Feature Engineering`)
 - Treinamento e avaliação de modelos (`Machine Learning`)
-- API para predição
-- Dashboard para monitoramento
+- API para predição (`FastAPI`)
+- Dashboard para monitoramento (`Streamlit`)
 
-## Arquitetura do Projeto
+---
 
+##  Arquitetura do Projeto
+
+```bash
  fraude-pipeline
  ┣ 📂 etl/                # Pipeline de extração e transformação
  ┣ 📂 features/           # Criação das variáveis derivadas
@@ -50,6 +51,7 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
  ┣ 📜 requirements.txt    # Dependências do projeto
  ┣ 📜 README.md           # Este arquivo
  ┗ 📜 .env.example        # Exemplo de configuração de ambiente
+```
 
 | Categoria            | Ferramentas                    |
 | -------------------- | ------------------------------ |
@@ -75,7 +77,7 @@ Distribuição dos scores
 Importância das features
 Tabela de alertas de fraude
 
-🧩 Pipeline de Execução
+ Pipeline de Execução
 
 1️⃣ ETL
 Extrai dados CSV e insere em raw_transactions (PostgreSQL).
@@ -131,6 +133,7 @@ python -m model.train_model
 uvicorn api.main:app --reload --port 8000
 streamlit run dashboard/app_dashboard.py
 ```
+
 
 
 
