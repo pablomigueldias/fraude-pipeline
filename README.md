@@ -5,9 +5,8 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-🚀 Projeto completo de **engenharia de dados e machine learning** para **detecção de fraudes** em transações financeiras.  
+Projeto completo de **engenharia de dados e machine learning** para **detecção de fraudes** em transações financeiras.  
 Inclui pipeline de ETL, modelagem com Random Forest, API com FastAPI e visualização via **Streamlit Dashboard**.
 
 ---
@@ -52,3 +51,4 @@ Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o 
  ┣ 📜 requirements.txt    # Dependências do projeto
  ┣ 📜 README.md           # Este arquivo
  ┗ 📜 .env.example        # Exemplo de configuração de ambiente
+
