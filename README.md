@@ -10,7 +10,7 @@ Projeto completo de **engenharia de dados e machine learning** para **detecção
 Inclui pipeline de **ETL**, **modelagem com Random Forest**, **API com FastAPI** e visualização interativa via **Streamlit Dashboard**.
 
 
-## 📋 Sumário
+## Sumário
 
 - [Visão Geral](#-visão-geral)
 - [Arquitetura do Projeto](#-arquitetura-do-projeto)
@@ -24,7 +24,7 @@ Inclui pipeline de **ETL**, **modelagem com Random Forest**, **API com FastAPI**
 
 ---
 
-## 💡 Visão Geral
+## Visão Geral
 
 O **Fraude Pipeline** demonstra um fluxo completo de **dados + IA aplicada à detecção de fraudes**.  
 Desde o tratamento do dataset bruto até a análise de alertas em tempo real, o projeto cobre:
@@ -104,7 +104,7 @@ Endpoint /predict recebe transações e retorna a probabilidade de fraude.
 Visualização em tempo real de alertas e indicadores de desempenho do modelo.
 
 
-💻 Como Executar Localmente
+## Como Executar Localmente
 
 1️⃣ Clonar o repositório
 ```
@@ -133,6 +133,7 @@ python -m model.train_model
 uvicorn api.main:app --reload --port 8000
 streamlit run dashboard/app_dashboard.py
 ```
+
 
 
 
